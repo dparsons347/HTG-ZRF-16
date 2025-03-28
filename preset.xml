@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<ip_presets schema="1.0">
+  <ip_preset preset_proc_name="ps_preset">
+    <ip vendor="xilinx.com" library="ip" name="zynq_ultra_ps_e" version="*">
+      <user_parameters>
+        <user_parameter name="CONFIG.PSU__PRESET_APPLIED" value="1"/>
+        <user_parameter name="CONFIG.PSU__USE__M_AXI_GP0" value="1"/>
+        <user_parameter name="CONFIG.PSU__USE__M_AXI_GP1" value="1"/>
+        <user_parameter name="CONFIG.PSU__USE__M_AXI_GP2" value="0"/>
+        <user_parameter name="CONFIG.PSU__USE__S_AXI_GP0" value="1"/>
+        <user_parameter name="CONFIG.PSU__USE__S_AXI_GP1" value="1"/>
+        <user_parameter name="CONFIG.PSU__USE__S_AXI_GP2" value="0"/>
+        <user_parameter name="CONFIG.PSU__USE__S_AXI_GP3" value="0"/>
+        <user_parameter name="CONFIG.PSU__USE__S_AXI_GP4" value="0"/>
+        <user_parameter name="CONFIG.PSU__USE__S_AXI_GP5" value="0"/>
+        <user_parameter name="CONFIG.PSU__USE__S_AXI_GP6" value="0"/>
+        <user_parameter name="CONFIG.PSU__USE__S_AXI_ACP" value="0"/>
+        <user_parameter name="CONFIG.PSU__USE__S_AXI_ACE" value="0"/>
+        <!-- DDR Configuration -->
+        <user_parameter name="CONFIG.PSU__DDRC__MEMORY_TYPE" value="DDR 4"/>
+        <user_parameter name="CONFIG.PSU__DDRC__SPEED_BIN" value="DDR4_2400R"/>
+        <user_parameter name="CONFIG.PSU__DDRC__CWL" value="12"/>
+        <user_parameter name="CONFIG.PSU__DDRC__BG_ADDR_COUNT" value="1"/>
+        <user_parameter name="CONFIG.PSU__DDRC__DEVICE_CAPACITY" value="8192 MBits"/>
+        <user_parameter name="CONFIG.PSU__DDRC__DRAM_WIDTH" value="16 Bits"/>
+        <user_parameter name="CONFIG.PSU__DDRC__ROW_ADDR_COUNT" value="16"/>
+        <user_parameter name="CONFIG.PSU__DDRC__BUS_WIDTH" value="64 Bit"/>
+        <user_parameter name="CONFIG.PSU__DDRC__T_FAW" value="30.0"/>
+        <user_parameter name="CONFIG.PSU__DDRC__T_RAS_MIN" value="32"/>
+        <user_parameter name="CONFIG.PSU__DDRC__T_RC" value="45.32"/>
+        <user_parameter name="CONFIG.PSU__DDRC__T_RCD" value="16"/>
+        <user_parameter name="CONFIG.PSU__DDRC__T_RP" value="16"/>
+        <user_parameter name="CONFIG.PSU__DDRC__ECC" value="Enabled"/>
+        <!-- MIO Configuration -->
+        <user_parameter name="CONFIG.PSU__UART0__PERIPHERAL__ENABLE" value="1"/>
+        <user_parameter name="CONFIG.PSU__UART0__PERIPHERAL__IO" value="MIO 18 .. 19"/>
+        <user_parameter name="CONFIG.PSU__UART1__PERIPHERAL__ENABLE" value="0"/>
+        <user_parameter name="CONFIG.PSU__USB0__PERIPHERAL__ENABLE" value="1"/>
+        <user_parameter name="CONFIG.PSU__USB0__PERIPHERAL__IO" value="MIO 52 .. 63"/>
+        <user_parameter name="CONFIG.PSU__USB1__PERIPHERAL__ENABLE" value="0"/>
+        <user_parameter name="CONFIG.PSU__DISPLAYPORT__PERIPHERAL__ENABLE" value="1"/>
+        <user_parameter name="CONFIG.PSU__DISPLAYPORT__PERIPHERAL__IO" value="MIO 27 .. 30"/>
+        <user_parameter name="CONFIG.PSU__SD1__PERIPHERAL__ENABLE" value="1"/>
+        <user_parameter name="CONFIG.PSU__SD1__PERIPHERAL__IO" value="MIO 39 .. 51"/>
+        <user_parameter name="CONFIG.PSU__SD1__GRP_CD__ENABLE" value="1"/>
+        <user_parameter name="CONFIG.PSU__SD1__GRP_POW__ENABLE" value="1"/>
+        <user_parameter name="CONFIG.PSU__SD1__SLOT_TYPE" value="SD 3.0"/>
+        <user_parameter name="CONFIG.PSU__I2C0__PERIPHERAL__ENABLE" value="1"/>
+        <user_parameter name="CONFIG.PSU__I2C0__PERIPHERAL__IO" value="MIO 14 .. 15"/>
+        <user_parameter name="CONFIG.PSU__ENET3__PERIPHERAL__ENABLE" value="1"/>
+        <user_parameter name="CONFIG.PSU__ENET3__PERIPHERAL__IO" value="MIO 64 .. 77"/>
+        <user_parameter name="CONFIG.PSU__ENET3__GRP_MDIO__ENABLE" value="1"/>
+        <user_parameter name="CONFIG.PSU__ENET3__GRP_MDIO__IO" value="MIO 76 .. 77"/>
+        <user_parameter name="CONFIG.PSU__SATA__PERIPHERAL__ENABLE" value="1"/>
+        <user_parameter name="CONFIG.PSU__SATA__LANE0__ENABLE" value="1"/>
+        <user_parameter name="CONFIG.PSU__SATA__LANE1__ENABLE" value="0"/>
+        <!-- RF Data Converter Configuration -->
+        <user_parameter name="CONFIG.PSU__PCIE__PERIPHERAL__ENABLE" value="0"/>
+        <user_parameter name="CONFIG.PSU__GPIO_EMIO__PERIPHERAL__ENABLE" value="1"/>
+        <user_parameter name="CONFIG.PSU__GPIO_EMIO__WIDTH" value="32"/>
+        <user_parameter name="CONFIG.PSU__TTC0__PERIPHERAL__ENABLE" value="1"/>
+        <user_parameter name="CONFIG.PSU__TTC1__PERIPHERAL__ENABLE" value="1"/>
+        <user_parameter name="CONFIG.PSU__TTC2__PERIPHERAL__ENABLE" value="1"/>
+        <user_parameter name="CONFIG.PSU__TTC3__PERIPHERAL__ENABLE" value="1"/>
+        <user_parameter name="CONFIG.PSU__SPI0__PERIPHERAL__ENABLE" value="0"/>
+        <user_parameter name="CONFIG.PSU__SPI1__PERIPHERAL__ENABLE" value="1"/>
+        <user_parameter name="CONFIG.PSU__SPI1__PERIPHERAL__IO" value="MIO 32 .. 37"/>
+        <user_parameter name="CONFIG.PSU__CRL_APB__SPI1_REF_CTRL__FREQMHZ" value="100"/>
+      </user_parameters>
+    </ip>
+  </ip_preset>
+
+  <ip_preset preset_proc_name="ddr4_pl_preset">
+    <ip vendor="xilinx.com" library="ip" name="ddr4" version="*">
+      <user_parameters>
+        <user_parameter name="CONFIG.C0.DDR4_MemoryPart" value="MT40A512M16HA-083E"/>
+        <user_parameter name="CONFIG.C0.DDR4_DataWidth" value="72"/>
+        <user_parameter name="CONFIG.C0.DDR4_TimePeriod" value="833"/>
+        <user_parameter name="CONFIG.C0.DDR4_InputClockPeriod" value="3332"/>
+        <user_parameter name="CONFIG.C0.DDR4_CasLatency" value="16"/>
+        <user_parameter name="CONFIG.C0.DDR4_CasWriteLatency" value="12"/>
+        <user_parameter name="CONFIG.C0.DDR4_BankGroupWidth" value="1"/>
+        <user_parameter name="CONFIG.C0.DDR4_AxiDataWidth" value="512"/>
+        <user_parameter name="CONFIG.C0.DDR4_AxiAddressWidth" value="32"/>
+        <user_parameter name="CONFIG.C0.DDR4_AxiIDWidth" value="4"/>
+        <user_parameter name="CONFIG.C0.DDR4_AxiSelection" value="true"/>
+        <user_parameter name="CONFIG.C0.DDR4_AxiArbitrationScheme" value="RD_PRI_REG"/>
+        <user_parameter name="CONFIG.C0.DDR4_ECC" value="true"/>
+      </user_parameters>
+    </ip>
+  </ip_preset>
+
+  <ip_preset preset_proc_name="qsfp28_a_preset">
+    <ip vendor="xilinx.com" library="ip" name="gtwizard_ultrascale" version="*">
+      <user_parameters>
+        <user_parameter name="CONFIG.GT_TYPE" value="GTY"/>
+        <user_parameter name="CONFIG.CHANNEL_ENABLE" value="X0Y24 X0Y25 X0Y26 X0Y27"/>
+        <user_parameter name="CONFIG.TX_MASTER_CHANNEL" value="X0Y24"/>
+        <user_parameter name="CONFIG.RX_MASTER_CHANNEL" value="X0Y24"/>
+        <user_parameter name="CONFIG.TX_LINE_RATE" value="25.78125"/>
+        <user_parameter name="CONFIG.TX_DATA_ENCODING" value="64B66B"/>
+        <user_parameter name="CONFIG.TX_REFCLK_FREQUENCY" value="161.1328125"/>
+        <user_parameter name="CONFIG.TX_USER_DATA_WIDTH" value="64"/>
+        <user_parameter name="CONFIG.TX_INT_DATA_WIDTH" value="64"/>
+        <user_parameter name="CONFIG.RX_LINE_RATE" value="25.78125"/>
+        <user_parameter name="CONFIG.RX_DATA_DECODING" value="64B66B"/>
+        <user_parameter name="CONFIG.RX_REFCLK_FREQUENCY" value="161.1328125"/>
+        <user_parameter name="CONFIG.RX_USER_DATA_WIDTH" value="64"/>
+        <user_parameter name="CONFIG.RX_INT_DATA_WIDTH" value="64"/>
+        <user_parameter name="CONFIG.REFCLK_SOURCE" value="REFCLK0_P"/>
+        <user_parameter name="CONFIG.ENABLE_OPTIONAL_PORTS" value="drpaddr_in drpclk_in drpdi_in drpen_in drpwe_in drpdo_out drprdy_out"/>
+      </user_parameters>
+    </ip>
+  </ip_preset>
+
+  <ip_preset preset_proc_name="qsfp28_b_preset">
+    <ip vendor="xilinx.com" library="ip" name="gtwizard_ultrascale" version="*">
+      <user_parameters>
+        <user_parameter name="CONFIG.GT_TYPE" value="GTY"/>
+        <user_parameter name="CONFIG.CHANNEL_ENABLE" value="X0Y28 X0Y29 X0Y30 X0Y31"/>
+        <user_parameter name="CONFIG.TX_MASTER_CHANNEL" value="X0Y28"/>
+        <user_parameter name="CONFIG.RX_MASTER_CHANNEL" value="X0Y28"/>
+        <user_parameter name="CONFIG.TX_LINE_RATE" value="25.78125"/>
+        <user_parameter name="CONFIG.TX_DATA_ENCODING" value="64B66B"/>
+        <user_parameter name="CONFIG.TX_REFCLK_FREQUENCY" value="161.1328125"/>
+        <user_parameter name="CONFIG.TX_USER_DATA_WIDTH" value="64"/>
+        <user_parameter name="CONFIG.TX_INT_DATA_WIDTH" value="64"/>
+        <user_parameter name="CONFIG.RX_LINE_RATE" value="25.78125"/>
+        <user_parameter name="CONFIG.RX_DATA_DECODING" value="64B66B"/>
+        <user_parameter name="CONFIG.RX_REFCLK_FREQUENCY" value="161.1328125"/>
+        <user_parameter name="CONFIG.RX_USER_DATA_WIDTH" value="64"/>
+        <user_parameter name="CONFIG.RX_INT_DATA_WIDTH" value="64"/>
+        <user_parameter name="CONFIG.REFCLK_SOURCE" value="REFCLK0_P"/>
+        <user_parameter name="CONFIG.ENABLE_OPTIONAL_PORTS" value="drpaddr_in drpclk_in drpdi_in drpen_in drpwe_in drpdo_out drprdy_out"/>
+      </user_parameters>
+    </ip>
+  </ip_preset>
+
+  <ip_preset preset_proc_name="rf_data_converter_preset">
+    <ip vendor="xilinx.com" library="ip" name="usp_rf_data_converter" version="*">
+      <user_parameters>
+        <user_parameter name="CONFIG.ADC0_Enable" value="1"/>
+        <user_parameter name="CONFIG.ADC0_Fabric_Freq" value="307.200"/>
+        <user_parameter name="CONFIG.ADC0_Outclk_Freq" value="307.200"/>
+        <user_parameter name="CONFIG.ADC0_Refclk_Freq" value="2457.600"/>
+        <user_parameter name="CONFIG.ADC0_Multi_Tile_Sync" value="true"/>
+        <user_parameter name="CONFIG.ADC0_Link_Coupling" value="1"/>
+        <user_parameter name="CONFIG.ADC0_PLL_Enable" value="true"/>
+        <user_parameter name="CONFIG.ADC0_Sampling_Rate" value="2.0"/>
+        <user_parameter name="CONFIG.ADC0_Fs_Max" value="2.5"/>
+        <user_parameter name="CONFIG.ADC0_Clock_Source" value="1"/>
+        <user_parameter name="CONFIG.ADC0_Clock_Dist" value="0"/>
+        
+        <user_parameter name="CONFIG.ADC1_Enable" value="1"/>
+        <user_parameter name="CONFIG.ADC1_Fabric_Freq" value="307.200"/>
+        <user_parameter name="CONFIG.ADC1_Outclk_Freq" value="307.200"/>
+        <user_parameter name="CONFIG.ADC1_Refclk_Freq" value="2457.600"/>
+        <user_parameter name="CONFIG.ADC1_Multi_Tile_Sync" value="true"/>
+        <user_parameter name="CONFIG.ADC1_Link_Coupling" value="1"/>
+        <user_parameter name="CONFIG.ADC1_PLL_Enable" value="true"/>
+        <user_parameter name="CONFIG.ADC1_Sampling_Rate" value="2.0"/>
+        <user_parameter name="CONFIG.ADC1_Fs_Max" value="2.5"/>
+        <user_parameter name="CONFIG.ADC1_Clock_Source" value="1"/>
+        <user_parameter name="CONFIG.ADC1_Clock_Dist" value="0"/>
+        
+        <user_parameter name="CONFIG.DAC0_Enable" value="1"/>
+        <user_parameter name="CONFIG.DAC0_Fabric_Freq" value="307.200"/>
+        <user_parameter name="CONFIG.DAC0_Outclk_Freq" value="307.200"/>
+        <user_parameter name="CONFIG.DAC0_Refclk_Freq" value="6553.600"/>
+        <user_parameter name="CONFIG.DAC0_Multi_Tile_Sync" value="true"/>
+        <user_parameter name="CONFIG.DAC0_Link_Coupling" value="1"/>
+        <user_parameter name="CONFIG.DAC0_PLL_Enable" value="true"/>
+        <user_parameter name="CONFIG.DAC0_Sampling_Rate" value="6.4"/>
+        <user_parameter name="CONFIG.DAC0_Fs_Max" value="6.554"/>
+        <user_parameter name="CONFIG.DAC0_Clock_Source" value="1"/>
+        <user_parameter name="CONFIG.DAC0_Clock_Dist" value="0"/>
+        
+        <user_parameter name="CONFIG.DAC1_Enable" value="1"/>
+        <user_parameter name="CONFIG.DAC1_Fabric_Freq" value="307.200"/>
+        <user_parameter name="CONFIG.DAC1_Outclk_Freq" value="307.200"/>
+        <user_parameter name="CONFIG.DAC1_Refclk_Freq" value="6553.600"/>
+        <user_parameter name="CONFIG.DAC1_Multi_Tile_Sync" value="true"/>
+        <user_parameter name="CONFIG.DAC1_Link_Coupling" value="1"/>
+        <user_parameter name="CONFIG.DAC1_PLL_Enable" value="true"/>
+        <user_parameter name="CONFIG.DAC1_Sampling_Rate" value="6.4"/>
+        <user_parameter name="CONFIG.DAC1_Fs_Max" value="6.554"/>
+        <user_parameter name="CONFIG.DAC1_Clock_Source" value="1"/>
+        <user_parameter name="CONFIG.DAC1_Clock_Dist" value="0"/>
+        
+        <!-- Enable all ADC/DAC tiles -->
+        <user_parameter name="CONFIG.ADC224_TileEnable" value="1"/>
+        <user_parameter name="CONFIG.ADC224_SliceEnable0" value="1"/>
+        <user_parameter name="CONFIG.ADC224_SliceEnable1" value="1"/>
+        <user_parameter name="CONFIG.ADC224_SliceEnable2" value="1"/>
+        <user_parameter name="CONFIG.ADC224_SliceEnable3" value="1"/>
+        
+        <user_parameter name="CONFIG.ADC225_TileEnable" value="1"/>
+        <user_parameter name="CONFIG.ADC225_SliceEnable0" value="1"/>
+        <user_parameter name="CONFIG.ADC225_SliceEnable1" value="1"/>
+        <user_parameter name="CONFIG.ADC225_SliceEnable2" value="1"/>
+        <user_parameter name="CONFIG.ADC225_SliceEnable3" value="1"/>
+        
+        <user_parameter name="CONFIG.ADC226_TileEnable" value="1"/>
+        <user_parameter name="CONFIG.ADC226_SliceEnable0" value="1"/>
+        <user_parameter name="CONFIG.ADC226_SliceEnable1" value="1"/>
+        <user_parameter name="CONFIG.ADC226_SliceEnable2" value="1"/>
+        <user_parameter name="CONFIG.ADC226_SliceEnable3" value="1"/>
+        
+        <user_parameter name="CONFIG.ADC227_TileEnable" value="1"/>
+        <user_parameter name="CONFIG.ADC227_SliceEnable0" value="1"/>
+        <user_parameter name="CONFIG.ADC227_SliceEnable1" value="1"/>
+        <user_parameter name="CONFIG.ADC227_SliceEnable2" value="1"/>
+        <user_parameter name="CONFIG.ADC227_SliceEnable3" value="1"/>
+        
+        <user_parameter name="CONFIG.DAC228_TileEnable" value="1"/>
+        <user_parameter name="CONFIG.DAC228_SliceEnable0" value="1"/>
+        <user_parameter name="CONFIG.DAC228_SliceEnable1" value="1"/>
+        <user_parameter name="CONFIG.DAC228_SliceEnable2" value="1"/>
+        <user_parameter name="CONFIG.DAC228_SliceEnable3" value="1"/>
+        
+        <user_parameter name="CONFIG.DAC229_TileEnable" value="1"/>
+        <user_parameter name="CONFIG.DAC229_SliceEnable0" value="1"/>
+        <user_parameter name="CONFIG.DAC229_SliceEnable1" value="1"/>
+        <user_parameter name="CONFIG.DAC229_SliceEnable2" value="1"/>
+        <user_parameter name="CONFIG.DAC229_SliceEnable3" value="1"/>
+        
+        <user_parameter name="CONFIG.DAC230_TileEnable" value="1"/>
+        <user_parameter name="CONFIG.DAC230_SliceEnable0" value="1"/>
+        <user_parameter name="CONFIG.DAC230_SliceEnable1" value="1"/>
+        <user_parameter name="CONFIG.DAC230_SliceEnable2" value="1"/>
+        <user_parameter name="CONFIG.DAC230_SliceEnable3" value="1"/>
+        
+        <user_parameter name="CONFIG.DAC231_TileEnable" value="1"/>
+        <user_parameter name="CONFIG.DAC231_SliceEnable0" value="1"/>
+        <user_parameter name="CONFIG.DAC231_SliceEnable1" value="1"/>
+        <user_parameter name="CONFIG.DAC231_SliceEnable2" value="1"/>
+        <user_parameter name="CONFIG.DAC231_SliceEnable3" value="1"/>
+      </user_parameters>
+    </ip>
+  </ip_preset>
+
+  <ip_preset preset_proc_name="uart_pl_preset">
+    <ip vendor="xilinx.com" library="ip" name="axi_uartlite" version="*">
+      <user_parameters>
+        <user_parameter name="CONFIG.C_BAUDRATE" value="115200"/>
+        <user_parameter name="CONFIG.C_DATA_BITS" value="8"/>
+        <user_parameter name="CONFIG.C_USE_PARITY" value="0"/>
+        <user_parameter name="CONFIG.C_ODD_PARITY" value="0"/>
+      </user_parameters>
+    </ip>
+  </ip_preset>
+
+  <ip_preset preset_proc_name="iic_pl_preset">
+    <ip vendor="xilinx.com" library="ip" name="axi_iic" version="*">
+      <user_parameters>
+        <user_parameter name="CONFIG.IIC_BOARD_INTERFACE" value="Custom"/>
+        <user_parameter name="CONFIG.USE_BOARD_FLOW" value="true"/>
+      </user_parameters>
+    </ip>
+  </ip_preset>
+
+  <ip_preset preset_proc_name="fmc_plus_preset">
+    <ip vendor="xilinx.com" library="ip" name="axi_fmcadc4" version="*">
+      <user_parameters>
+        <user_parameter name="CONFIG.FMC_MODE" value="FMC_PLUS"/>
+        <user_parameter name="CONFIG.FMC_LANES" value="8"/>
+      </user_parameters>
+    </ip>
+  </ip_preset>
+
+  <!-- Connection matrix -->
+  <connection_matrix>
+    <connection ip_preset="ps_preset" board_part="part0"/>
+    <connection ip_preset="ddr4_pl_preset" board_part="ddr4_pl_dimm"/>
+    <connection ip_preset="qsfp28_a_preset" board_part="qsfp28_a_connector"/>
+    <connection ip_preset="qsfp28_b_preset" board_part="qsfp28_b_connector"/>
+    <connection ip_preset="rf_data_converter_preset" board_part="adc_connectors"/>
+    <connection ip_preset="rf_data_converter_preset" board_part="dac_connectors"/>
+    <connection ip_preset="uart_pl_preset" board_part="uart_pl"/>
+    <connection ip_preset="iic_pl_preset" board_part="iic_pl"/>
+    <connection ip_preset="fmc_plus_preset" board_part="fmc_plus_connector"/>
+  </connection_matrix>
+</ip_presets>

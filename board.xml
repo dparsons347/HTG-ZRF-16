@@ -1,0 +1,974 @@
+<!-- HTG-ZRF16 Platform Board Definition File -->
+<board schema_version="2.0" vendor="hitechglobal.com" name="htg_zrf16" display_name="HTG-ZRF16 Platform" url="http://www.hitechglobal.com" preset_file="preset.xml">
+  <images>
+    <image name="htg_zrf16_board.jpg" display_name="HTG-ZRF16 Board" sub_type="board">
+      <description>HTG-ZRF16 Board Image</description>
+    </image>
+  </images>
+  
+  <compatible_board_revisions>
+    <revision id="0">1.0</revision>
+  </compatible_board_revisions>
+  
+  <file_version>1.0</file_version>
+  
+  <description>HiTech Global ZYNQ UltraScale+ RFSoC Development Platform with ZU29DR</description>
+  
+  <components>
+    <!-- FPGA -->
+    <component name="part0" display_name="HTG-ZRF16 Platform" type="fpga" part_name="xczu49dr-ffvf1760-2-e" pin_map_file="part0_pins.xml" vendor="xilinx.com" spec_url="www.hitechglobal.com">
+      <description>FPGA component on the HTG-ZRF16 board</description>
+      
+      <interfaces>
+        <!-- DDR4 SODIMM Interface (PL side) -->
+        <interface mode="master" name="ddr4_sodimm_pl" type="xilinx.com:interface:ddr4:1.0" of_component="ddr4_sodimm_pl">
+          <preferred_ips>
+            <preferred_ip vendor="xilinx.com" library="ip" name="ddr4" order="0"/>
+          </preferred_ips>
+          <port_maps>
+            <port_map logical_port="CK_T" physical_port="DDR4_PL_CK0_T" dir="output"/>
+            <port_map logical_port="CK_C" physical_port="DDR4_PL_CK0_C" dir="output"/>
+            <port_map logical_port="CK_T_A1" physical_port="DDR4_PL_CK1_T" dir="output"/>
+            <port_map logical_port="CK_C_A1" physical_port="DDR4_PL_CK1_C" dir="output"/>
+            <port_map logical_port="ACT_N" physical_port="DDR4_PL_ACT_N" dir="output"/>
+            <port_map logical_port="ALERT_N" physical_port="DDR4_PL_ALERT_N" dir="input"/>
+            <port_map logical_port="PAR" physical_port="DDR4_PL_PAR" dir="output"/>
+            <port_map logical_port="A0" physical_port="DDR4_PL_A[0]" dir="output"/>
+            <port_map logical_port="A1" physical_port="DDR4_PL_A[1]" dir="output"/>
+            <port_map logical_port="A2" physical_port="DDR4_PL_A[2]" dir="output"/>
+            <port_map logical_port="A3" physical_port="DDR4_PL_A[3]" dir="output"/>
+            <port_map logical_port="A4" physical_port="DDR4_PL_A[4]" dir="output"/>
+            <port_map logical_port="A5" physical_port="DDR4_PL_A[5]" dir="output"/>
+            <port_map logical_port="A6" physical_port="DDR4_PL_A[6]" dir="output"/>
+            <port_map logical_port="A7" physical_port="DDR4_PL_A[7]" dir="output"/>
+            <port_map logical_port="A8" physical_port="DDR4_PL_A[8]" dir="output"/>
+            <port_map logical_port="A9" physical_port="DDR4_PL_A[9]" dir="output"/>
+            <port_map logical_port="A10" physical_port="DDR4_PL_A[10]" dir="output"/>
+            <port_map logical_port="A11" physical_port="DDR4_PL_A[11]" dir="output"/>
+            <port_map logical_port="A12" physical_port="DDR4_PL_A[12]" dir="output"/>
+            <port_map logical_port="A13" physical_port="DDR4_PL_A[13]" dir="output"/>
+            <port_map logical_port="A14" physical_port="DDR4_PL_A[14]" dir="output"/>
+            <port_map logical_port="A15" physical_port="DDR4_PL_A[15]" dir="output"/>
+            <port_map logical_port="A16" physical_port="DDR4_PL_A[16]" dir="output"/>
+            <port_map logical_port="BA0" physical_port="DDR4_PL_BA[0]" dir="output"/>
+            <port_map logical_port="BA1" physical_port="DDR4_PL_BA[1]" dir="output"/>
+            <port_map logical_port="BG0" physical_port="DDR4_PL_BG[0]" dir="output"/>
+            <port_map logical_port="BG1" physical_port="DDR4_PL_BG[1]" dir="output"/>
+            <port_map logical_port="CKE" physical_port="DDR4_PL_CKE0" dir="output"/>
+            <port_map logical_port="CKE_A1" physical_port="DDR4_PL_CKE1" dir="output"/>
+            <port_map logical_port="CS_N" physical_port="DDR4_PL_CS0_N" dir="output"/>
+            <port_map logical_port="CS_N_A1" physical_port="DDR4_PL_CS1_N" dir="output"/>
+            <port_map logical_port="CS_N_A2" physical_port="DDR4_PL_CS2_N" dir="output"/>
+            <port_map logical_port="CS_N_A3" physical_port="DDR4_PL_CS3_N" dir="output"/>
+            <port_map logical_port="ODT" physical_port="DDR4_PL_ODT0" dir="output"/>
+            <port_map logical_port="ODT_A1" physical_port="DDR4_PL_ODT1" dir="output"/>
+            <port_map logical_port="RESET_N" physical_port="DDR4_PL_RST_N" dir="output"/>
+            <port_map logical_port="EVENT_N" physical_port="DDR4_PL_EVENT_N" dir="input"/>
+            
+            <port_map logical_port="DQ0" physical_port="DDR4_PL_DQ[0]" dir="inout"/>
+            <port_map logical_port="DQ1" physical_port="DDR4_PL_DQ[1]" dir="inout"/>
+            <port_map logical_port="DQ2" physical_port="DDR4_PL_DQ[2]" dir="inout"/>
+            <port_map logical_port="DQ3" physical_port="DDR4_PL_DQ[3]" dir="inout"/>
+            <port_map logical_port="DQ4" physical_port="DDR4_PL_DQ[4]" dir="inout"/>
+            <port_map logical_port="DQ5" physical_port="DDR4_PL_DQ[5]" dir="inout"/>
+            <port_map logical_port="DQ6" physical_port="DDR4_PL_DQ[6]" dir="inout"/>
+            <port_map logical_port="DQ7" physical_port="DDR4_PL_DQ[7]" dir="inout"/>
+            <port_map logical_port="DQ8" physical_port="DDR4_PL_DQ[8]" dir="inout"/>
+            <port_map logical_port="DQ9" physical_port="DDR4_PL_DQ[9]" dir="inout"/>
+            <port_map logical_port="DQ10" physical_port="DDR4_PL_DQ[10]" dir="inout"/>
+            <port_map logical_port="DQ11" physical_port="DDR4_PL_DQ[11]" dir="inout"/>
+            <port_map logical_port="DQ12" physical_port="DDR4_PL_DQ[12]" dir="inout"/>
+            <port_map logical_port="DQ13" physical_port="DDR4_PL_DQ[13]" dir="inout"/>
+            <port_map logical_port="DQ14" physical_port="DDR4_PL_DQ[14]" dir="inout"/>
+            <port_map logical_port="DQ15" physical_port="DDR4_PL_DQ[15]" dir="inout"/>
+            <port_map logical_port="DQ16" physical_port="DDR4_PL_DQ[16]" dir="inout"/>
+            <port_map logical_port="DQ17" physical_port="DDR4_PL_DQ[17]" dir="inout"/>
+            <port_map logical_port="DQ18" physical_port="DDR4_PL_DQ[18]" dir="inout"/>
+            <port_map logical_port="DQ19" physical_port="DDR4_PL_DQ[19]" dir="inout"/>
+            <port_map logical_port="DQ20" physical_port="DDR4_PL_DQ[20]" dir="inout"/>
+            <port_map logical_port="DQ21" physical_port="DDR4_PL_DQ[21]" dir="inout"/>
+            <port_map logical_port="DQ22" physical_port="DDR4_PL_DQ[22]" dir="inout"/>
+            <port_map logical_port="DQ23" physical_port="DDR4_PL_DQ[23]" dir="inout"/>
+            <port_map logical_port="DQ24" physical_port="DDR4_PL_DQ[24]" dir="inout"/>
+            <port_map logical_port="DQ25" physical_port="DDR4_PL_DQ[25]" dir="inout"/>
+            <port_map logical_port="DQ26" physical_port="DDR4_PL_DQ[26]" dir="inout"/>
+            <port_map logical_port="DQ27" physical_port="DDR4_PL_DQ[27]" dir="inout"/>
+            <port_map logical_port="DQ28" physical_port="DDR4_PL_DQ[28]" dir="inout"/>
+            <port_map logical_port="DQ29" physical_port="DDR4_PL_DQ[29]" dir="inout"/>
+            <port_map logical_port="DQ30" physical_port="DDR4_PL_DQ[30]" dir="inout"/>
+            <port_map logical_port="DQ31" physical_port="DDR4_PL_DQ[31]" dir="inout"/>
+            <port_map logical_port="DQ32" physical_port="DDR4_PL_DQ[32]" dir="inout"/>
+            <port_map logical_port="DQ33" physical_port="DDR4_PL_DQ[33]" dir="inout"/>
+            <port_map logical_port="DQ34" physical_port="DDR4_PL_DQ[34]" dir="inout"/>
+            <port_map logical_port="DQ35" physical_port="DDR4_PL_DQ[35]" dir="inout"/>
+            <port_map logical_port="DQ36" physical_port="DDR4_PL_DQ[36]" dir="inout"/>
+            <port_map logical_port="DQ37" physical_port="DDR4_PL_DQ[37]" dir="inout"/>
+            <port_map logical_port="DQ38" physical_port="DDR4_PL_DQ[38]" dir="inout"/>
+            <port_map logical_port="DQ39" physical_port="DDR4_PL_DQ[39]" dir="inout"/>
+            <port_map logical_port="DQ40" physical_port="DDR4_PL_DQ[40]" dir="inout"/>
+            <port_map logical_port="DQ41" physical_port="DDR4_PL_DQ[41]" dir="inout"/>
+            <port_map logical_port="DQ42" physical_port="DDR4_PL_DQ[42]" dir="inout"/>
+            <port_map logical_port="DQ43" physical_port="DDR4_PL_DQ[43]" dir="inout"/>
+            <port_map logical_port="DQ44" physical_port="DDR4_PL_DQ[44]" dir="inout"/>
+            <port_map logical_port="DQ45" physical_port="DDR4_PL_DQ[45]" dir="inout"/>
+            <port_map logical_port="DQ46" physical_port="DDR4_PL_DQ[46]" dir="inout"/>
+            <port_map logical_port="DQ47" physical_port="DDR4_PL_DQ[47]" dir="inout"/>
+            <port_map logical_port="DQ48" physical_port="DDR4_PL_DQ[48]" dir="inout"/>
+            <port_map logical_port="DQ49" physical_port="DDR4_PL_DQ[49]" dir="inout"/>
+            <port_map logical_port="DQ50" physical_port="DDR4_PL_DQ[50]" dir="inout"/>
+            <port_map logical_port="DQ51" physical_port="DDR4_PL_DQ[51]" dir="inout"/>
+            <port_map logical_port="DQ52" physical_port="DDR4_PL_DQ[52]" dir="inout"/>
+            <port_map logical_port="DQ53" physical_port="DDR4_PL_DQ[53]" dir="inout"/>
+            <port_map logical_port="DQ54" physical_port="DDR4_PL_DQ[54]" dir="inout"/>
+            <port_map logical_port="DQ55" physical_port="DDR4_PL_DQ[55]" dir="inout"/>
+            <port_map logical_port="DQ56" physical_port="DDR4_PL_DQ[56]" dir="inout"/>
+            <port_map logical_port="DQ57" physical_port="DDR4_PL_DQ[57]" dir="inout"/>
+            <port_map logical_port="DQ58" physical_port="DDR4_PL_DQ[58]" dir="inout"/>
+            <port_map logical_port="DQ59" physical_port="DDR4_PL_DQ[59]" dir="inout"/>
+            <port_map logical_port="DQ60" physical_port="DDR4_PL_DQ[60]" dir="inout"/>
+            <port_map logical_port="DQ61" physical_port="DDR4_PL_DQ[61]" dir="inout"/>
+            <port_map logical_port="DQ62" physical_port="DDR4_PL_DQ[62]" dir="inout"/>
+            <port_map logical_port="DQ63" physical_port="DDR4_PL_DQ[63]" dir="inout"/>
+            <port_map logical_port="DQ64" physical_port="DDR4_PL_DQ[64]" dir="inout"/>
+            <port_map logical_port="DQ65" physical_port="DDR4_PL_DQ[65]" dir="inout"/>
+            <port_map logical_port="DQ66" physical_port="DDR4_PL_DQ[66]" dir="inout"/>
+            <port_map logical_port="DQ67" physical_port="DDR4_PL_DQ[67]" dir="inout"/>
+            <port_map logical_port="DQ68" physical_port="DDR4_PL_DQ[68]" dir="inout"/>
+            <port_map logical_port="DQ69" physical_port="DDR4_PL_DQ[69]" dir="inout"/>
+            <port_map logical_port="DQ70" physical_port="DDR4_PL_DQ[70]" dir="inout"/>
+            <port_map logical_port="DQ71" physical_port="DDR4_PL_DQ[71]" dir="inout"/>
+            
+            <port_map logical_port="DQS_T0" physical_port="DDR4_PL_DQS_T[0]" dir="inout"/>
+            <port_map logical_port="DQS_C0" physical_port="DDR4_PL_DQS_C[0]" dir="inout"/>
+            <port_map logical_port="DQS_T1" physical_port="DDR4_PL_DQS_T[1]" dir="inout"/>
+            <port_map logical_port="DQS_C1" physical_port="DDR4_PL_DQS_C[1]" dir="inout"/>
+            <port_map logical_port="DQS_T2" physical_port="DDR4_PL_DQS_T[2]" dir="inout"/>
+            <port_map logical_port="DQS_C2" physical_port="DDR4_PL_DQS_C[2]" dir="inout"/>
+            <port_map logical_port="DQS_T3" physical_port="DDR4_PL_DQS_T[3]" dir="inout"/>
+            <port_map logical_port="DQS_C3" physical_port="DDR4_PL_DQS_C[3]" dir="inout"/>
+            <port_map logical_port="DQS_T4" physical_port="DDR4_PL_DQS_T[4]" dir="inout"/>
+            <port_map logical_port="DQS_C4" physical_port="DDR4_PL_DQS_C[4]" dir="inout"/>
+            <port_map logical_port="DQS_T5" physical_port="DDR4_PL_DQS_T[5]" dir="inout"/>
+            <port_map logical_port="DQS_C5" physical_port="DDR4_PL_DQS_C[5]" dir="inout"/>
+            <port_map logical_port="DQS_T6" physical_port="DDR4_PL_DQS_T[6]" dir="inout"/>
+            <port_map logical_port="DQS_C6" physical_port="DDR4_PL_DQS_C[6]" dir="inout"/>
+            <port_map logical_port="DQS_T7" physical_port="DDR4_PL_DQS_T[7]" dir="inout"/>
+            <port_map logical_port="DQS_C7" physical_port="DDR4_PL_DQS_C[7]" dir="inout"/>
+            <port_map logical_port="DQS_T8" physical_port="DDR4_PL_DQS_T[8]" dir="inout"/>
+            <port_map logical_port="DQS_C8" physical_port="DDR4_PL_DQS_C[8]" dir="inout"/>
+            
+            <port_map logical_port="DM_DBI_N0" physical_port="DDR4_PL_DM_DBI_N[0]" dir="output"/>
+            <port_map logical_port="DM_DBI_N1" physical_port="DDR4_PL_DM_DBI_N[1]" dir="output"/>
+            <port_map logical_port="DM_DBI_N2" physical_port="DDR4_PL_DM_DBI_N[2]" dir="output"/>
+            <port_map logical_port="DM_DBI_N3" physical_port="DDR4_PL_DM_DBI_N[3]" dir="output"/>
+            <port_map logical_port="DM_DBI_N4" physical_port="DDR4_PL_DM_DBI_N[4]" dir="output"/>
+            <port_map logical_port="DM_DBI_N5" physical_port="DDR4_PL_DM_DBI_N[5]" dir="output"/>
+            <port_map logical_port="DM_DBI_N6" physical_port="DDR4_PL_DM_DBI_N[6]" dir="output"/>
+            <port_map logical_port="DM_DBI_N7" physical_port="DDR4_PL_DM_DBI_N[7]" dir="output"/>
+            <port_map logical_port="DM_DBI_N8" physical_port="DDR4_PL_DM_DBI_N[8]" dir="output"/>
+            
+            <port_map logical_port="CK_T" physical_port="SYS_CLK_DDR4_PL_P" dir="input"/>
+            <port_map logical_port="CK_C" physical_port="SYS_CLK_DDR4_PL_N" dir="input"/>
+          </port_maps>
+        </interface>
+        
+        <!-- FMC+ HPC Interface -->
+        <interface mode="master" name="fmc_hpc_connector" type="xilinx.com:interface:fmc_hpc:1.0" of_component="fmc_hpc_connector">
+          <port_maps>
+            <!-- HPC LA (Low-speed, Analog) Ports -->
+            <port_map logical_port="LA00_CC_P" physical_port="FMC_PL_LA[0]_CC_P" dir="inout"/>
+            <port_map logical_port="LA00_CC_N" physical_port="FMC_PL_LA[0]_CC_N" dir="inout"/>
+            <port_map logical_port="LA01_CC_P" physical_port="FMC_PL_LA[1]_CC_P" dir="inout"/>
+            <port_map logical_port="LA01_CC_N" physical_port="FMC_PL_LA[1]_CC_N" dir="inout"/>
+            <port_map logical_port="LA02_P" physical_port="FMC_PL_LA[2]_P" dir="inout"/>
+            <port_map logical_port="LA02_N" physical_port="FMC_PL_LA[2]_N" dir="inout"/>
+            <port_map logical_port="LA03_P" physical_port="FMC_PL_LA[3]_P" dir="inout"/>
+            <port_map logical_port="LA03_N" physical_port="FMC_PL_LA[3]_N" dir="inout"/>
+            <port_map logical_port="LA04_P" physical_port="FMC_PL_LA[4]_P" dir="inout"/>
+            <port_map logical_port="LA04_N" physical_port="FMC_PL_LA[4]_N" dir="inout"/>
+            <port_map logical_port="LA05_P" physical_port="FMC_PL_LA[5]_P" dir="inout"/>
+            <port_map logical_port="LA05_N" physical_port="FMC_PL_LA[5]_N" dir="inout"/>
+            <port_map logical_port="LA06_P" physical_port="FMC_PL_LA[6]_P" dir="inout"/>
+            <port_map logical_port="LA06_N" physical_port="FMC_PL_LA[6]_N" dir="inout"/>
+            <port_map logical_port="LA07_P" physical_port="FMC_PL_LA[7]_P" dir="inout"/>
+            <port_map logical_port="LA07_N" physical_port="FMC_PL_LA[7]_N" dir="inout"/>
+            <port_map logical_port="LA08_P" physical_port="FMC_PL_LA[8]_P" dir="inout"/>
+            <port_map logical_port="LA08_N" physical_port="FMC_PL_LA[8]_N" dir="inout"/>
+            <port_map logical_port="LA09_P" physical_port="FMC_PL_LA[9]_P" dir="inout"/>
+            <port_map logical_port="LA09_N" physical_port="FMC_PL_LA[9]_N" dir="inout"/>
+            <port_map logical_port="LA10_P" physical_port="FMC_PL_LA[10]_P" dir="inout"/>
+            <port_map logical_port="LA10_N" physical_port="FMC_PL_LA[10]_N" dir="inout"/>
+            <port_map logical_port="LA11_P" physical_port="FMC_PL_LA[11]_P" dir="inout"/>
+            <port_map logical_port="LA11_N" physical_port="FMC_PL_LA[11]_N" dir="inout"/>
+            <port_map logical_port="LA12_P" physical_port="FMC_PL_LA[12]_P" dir="inout"/>
+            <port_map logical_port="LA12_N" physical_port="FMC_PL_LA[12]_N" dir="inout"/>
+            <port_map logical_port="LA13_P" physical_port="FMC_PL_LA[13]_P" dir="inout"/>
+            <port_map logical_port="LA13_N" physical_port="FMC_PL_LA[13]_N" dir="inout"/>
+            <port_map logical_port="LA14_P" physical_port="FMC_PL_LA[14]_P" dir="inout"/>
+            <port_map logical_port="LA14_N" physical_port="FMC_PL_LA[14]_N" dir="inout"/>
+            <port_map logical_port="LA15_P" physical_port="FMC_PL_LA[15]_P" dir="inout"/>
+            <port_map logical_port="LA15_N" physical_port="FMC_PL_LA[15]_N" dir="inout"/>
+            <port_map logical_port="LA16_P" physical_port="FMC_PL_LA[16]_P" dir="inout"/>
+            <port_map logical_port="LA16_N" physical_port="FMC_PL_LA[16]_N" dir="inout"/>
+            <port_map logical_port="LA17_CC_P" physical_port="FMC_PL_LA[17]_CC_P" dir="inout"/>
+            <port_map logical_port="LA17_CC_N" physical_port="FMC_PL_LA[17]_CC_N" dir="inout"/>
+            <port_map logical_port="LA18_CC_P" physical_port="FMC_PL_LA[18]_CC_P" dir="inout"/>
+            <port_map logical_port="LA18_CC_N" physical_port="FMC_PL_LA[18]_CC_N" dir="inout"/>
+            <port_map logical_port="LA19_P" physical_port="FMC_PL_LA[19]_P" dir="inout"/>
+            <port_map logical_port="LA19_N" physical_port="FMC_PL_LA[19]_N" dir="inout"/>
+            <port_map logical_port="LA20_P" physical_port="FMC_PL_LA[20]_P" dir="inout"/>
+            <port_map logical_port="LA20_N" physical_port="FMC_PL_LA[20]_N" dir="inout"/>
+            <port_map logical_port="LA21_P" physical_port="FMC_PL_LA[21]_P" dir="inout"/>
+            <port_map logical_port="LA21_N" physical_port="FMC_PL_LA[21]_N" dir="inout"/>
+            <port_map logical_port="LA22_P" physical_port="FMC_PL_LA[22]_P" dir="inout"/>
+            <port_map logical_port="LA22_N" physical_port="FMC_PL_LA[22]_N" dir="inout"/>
+            <port_map logical_port="LA23_P" physical_port="FMC_PL_LA[23]_P" dir="inout"/>
+            <port_map logical_port="LA23_N" physical_port="FMC_PL_LA[23]_N" dir="inout"/>
+            <port_map logical_port="LA24_P" physical_port="FMC_PL_LA[24]_P" dir="inout"/>
+            <port_map logical_port="LA24_N" physical_port="FMC_PL_LA[24]_N" dir="inout"/>
+            <port_map logical_port="LA25_P" physical_port="FMC_PL_LA[25]_P" dir="inout"/>
+            <port_map logical_port="LA25_N" physical_port="FMC_PL_LA[25]_N" dir="inout"/>
+            <port_map logical_port="LA26_P" physical_port="FMC_PL_LA[26]_P" dir="inout"/>
+            <port_map logical_port="LA26_N" physical_port="FMC_PL_LA[26]_N" dir="inout"/>
+            <port_map logical_port="LA27_P" physical_port="FMC_PL_LA[27]_P" dir="inout"/>
+            <port_map logical_port="LA27_N" physical_port="FMC_PL_LA[27]_N" dir="inout"/>
+            <port_map logical_port="LA28_P" physical_port="FMC_PL_LA[28]_P" dir="inout"/>
+            <port_map logical_port="LA28_N" physical_port="FMC_PL_LA[28]_N" dir="inout"/>
+            <port_map logical_port="LA29_P" physical_port="FMC_PL_LA[29]_P" dir="inout"/>
+            <port_map logical_port="LA29_N" physical_port="FMC_PL_LA[29]_N" dir="inout"/>
+            <port_map logical_port="LA30_P" physical_port="FMC_PL_LA[30]_P" dir="inout"/>
+            <port_map logical_port="LA30_N" physical_port="FMC_PL_LA[30]_N" dir="inout"/>
+            <port_map logical_port="LA31_P" physical_port="FMC_PL_LA[31]_P" dir="inout"/>
+            <port_map logical_port="LA31_N" physical_port="FMC_PL_LA[31]_N" dir="inout"/>
+            <port_map logical_port="LA32_P" physical_port="FMC_PL_LA[32]_P" dir="inout"/>
+            <port_map logical_port="LA32_N" physical_port="FMC_PL_LA[32]_N" dir="inout"/>
+            <port_map logical_port="LA33_P" physical_port="FMC_PL_LA[33]_P" dir="inout"/>
+            <port_map logical_port="LA33_N" physical_port="FMC_PL_LA[33]_N" dir="inout"/>
+            
+            <!-- HPC HA (High-speed, Analog) Ports -->
+            <port_map logical_port="HA00_CC_P" physical_port="FMC_PL_HA[0]_CC_P" dir="inout"/>
+            <port_map logical_port="HA00_CC_N" physical_port="FMC_PL_HA[0]_CC_N" dir="inout"/>
+            <port_map logical_port="HA01_CC_P" physical_port="FMC_PL_HA[1]_CC_P" dir="inout"/>
+            <port_map logical_port="HA01_CC_N" physical_port="FMC_PL_HA[1]_CC_N" dir="inout"/>
+            <port_map logical_port="HA02_P" physical_port="FMC_PL_HA[2]_P" dir="inout"/>
+            <port_map logical_port="HA02_N" physical_port="FMC_PL_HA[2]_N" dir="inout"/>
+            <port_map logical_port="HA03_P" physical_port="FMC_PL_HA[3]_P" dir="inout"/>
+            <port_map logical_port="HA03_N" physical_port="FMC_PL_HA[3]_N" dir="inout"/>
+            <port_map logical_port="HA04_P" physical_port="FMC_PL_HA[4]_P" dir="inout"/>
+            <port_map logical_port="HA04_N" physical_port="FMC_PL_HA[4]_N" dir="inout"/>
+            <port_map logical_port="HA05_P" physical_port="FMC_PL_HA[5]_P" dir="inout"/>
+            <port_map logical_port="HA05_N" physical_port="FMC_PL_HA[5]_N" dir="inout"/>
+            <port_map logical_port="HA06_P" physical_port="FMC_PL_HA[6]_P" dir="inout"/>
+            <port_map logical_port="HA06_N" physical_port="FMC_PL_HA[6]_N" dir="inout"/>
+            <port_map logical_port="HA07_P" physical_port="FMC_PL_HA[7]_P" dir="inout"/>
+            <port_map logical_port="HA07_N" physical_port="FMC_PL_HA[7]_N" dir="inout"/>
+            <port_map logical_port="HA08_P" physical_port="FMC_PL_HA[8]_P" dir="inout"/>
+            <port_map logical_port="HA08_N" physical_port="FMC_PL_HA[8]_N" dir="inout"/>
+            <port_map logical_port="HA09_P" physical_port="FMC_PL_HA[9]_P" dir="inout"/>
+            <port_map logical_port="HA09_N" physical_port="FMC_PL_HA[9]_N" dir="inout"/>
+            <port_map logical_port="HA10_P" physical_port="FMC_PL_HA[10]_P" dir="inout"/>
+            <port_map logical_port="HA10_N" physical_port="FMC_PL_HA[10]_N" dir="inout"/>
+            <port_map logical_port="HA11_P" physical_port="FMC_PL_HA[11]_P" dir="inout"/>
+            <port_map logical_port="HA11_N" physical_port="FMC_PL_HA[11]_N" dir="inout"/>
+            <port_map logical_port="HA12_P" physical_port="FMC_PL_HA[12]_P" dir="inout"/>
+            <port_map logical_port="HA12_N" physical_port="FMC_PL_HA[12]_N" dir="inout"/>
+            <port_map logical_port="HA13_P" physical_port="FMC_PL_HA[13]_P" dir="inout"/>
+            <port_map logical_port="HA13_N" physical_port="FMC_PL_HA[13]_N" dir="inout"/>
+            <port_map logical_port="HA14_P" physical_port="FMC_PL_HA[14]_P" dir="inout"/>
+            <port_map logical_port="HA14_N" physical_port="FMC_PL_HA[14]_N" dir="inout"/>
+            <port_map logical_port="HA15_P" physical_port="FMC_PL_HA[15]_P" dir="inout"/>
+            <port_map logical_port="HA15_N" physical_port="FMC_PL_HA[15]_N" dir="inout"/>
+            <port_map logical_port="HA16_P" physical_port="FMC_PL_HA[16]_P" dir="inout"/>
+            <port_map logical_port="HA16_N" physical_port="FMC_PL_HA[16]_N" dir="inout"/>
+            <port_map logical_port="HA17_CC_P" physical_port="FMC_PL_HA[17]_CC_P" dir="inout"/>
+            <port_map logical_port="HA17_CC_N" physical_port="FMC_PL_HA[17]_CC_N" dir="inout"/>
+            <port_map logical_port="HA18_P" physical_port="FMC_PL_HA[18]_CC_P" dir="inout"/>
+            <port_map logical_port="HA18_N" physical_port="FMC_PL_HA[18]_CC_N" dir="inout"/>
+            <port_map logical_port="HA19_P" physical_port="FMC_PL_HA[19]_P" dir="inout"/>
+            <port_map logical_port="HA19_N" physical_port="FMC_PL_HA[19]_N" dir="inout"/>
+            <port_map logical_port="HA20_P" physical_port="FMC_PL_HA[20]_P" dir="inout"/>
+            <port_map logical_port="HA20_N" physical_port="FMC_PL_HA[20]_N" dir="inout"/>
+            <port_map logical_port="HA21_P" physical_port="FMC_PL_HA[21]_P" dir="inout"/>
+            <port_map logical_port="HA21_N" physical_port="FMC_PL_HA[21]_N" dir="inout"/>
+            <port_map logical_port="HA22_P" physical_port="FMC_PL_HA[22]_P" dir="inout"/>
+            <port_map logical_port="HA22_N" physical_port="FMC_PL_HA[22]_N" dir="inout"/>
+            <port_map logical_port="HA23_P" physical_port="FMC_PL_HA[23]_P" dir="inout"/>
+            <port_map logical_port="HA23_N" physical_port="FMC_PL_HA[23]_N" dir="inout"/>
+            
+            <!-- HPC Transceiver Channel Connections -->
+            <port_map logical_port="DP0_C2M_P" physical_port="FMC_PL_DP[0]_C2M_P" dir="output"/>
+            <port_map logical_port="DP0_C2M_N" physical_port="FMC_PL_DP[0]_C2M_N" dir="output"/>
+            <port_map logical_port="DP0_M2C_P" physical_port="FMC_PL_DP[0]_M2C_P" dir="input"/>
+            <port_map logical_port="DP0_M2C_N" physical_port="FMC_PL_DP[0]_M2C_N" dir="input"/>
+            <port_map logical_port="DP1_C2M_P" physical_port="FMC_PL_DP[1]_C2M_P" dir="output"/>
+            <port_map logical_port="DP1_C2M_N" physical_port="FMC_PL_DP[1]_C2M_N" dir="output"/>
+            <port_map logical_port="DP1_M2C_P" physical_port="FMC_PL_DP[1]_M2C_P" dir="input"/>
+            <port_map logical_port="DP1_M2C_N" physical_port="FMC_PL_DP[1]_M2C_N" dir="input"/>
+            <port_map logical_port="DP2_C2M_P" physical_port="FMC_PL_DP[2]_C2M_P" dir="output"/>
+            <port_map logical_port="DP2_C2M_N" physical_port="FMC_PL_DP[2]_C2M_N" dir="output"/>
+            <port_map logical_port="DP2_M2C_P" physical_port="FMC_PL_DP[2]_M2C_P" dir="input"/>
+            <port_map logical_port="DP2_M2C_N" physical_port="FMC_PL_DP[2]_M2C_N" dir="input"/>
+            <port_map logical_port="DP3_C2M_P" physical_port="FMC_PL_DP[3]_C2M_P" dir="output"/>
+            <port_map logical_port="DP3_C2M_N" physical_port="FMC_PL_DP[3]_C2M_N" dir="output"/>
+            <port_map logical_port="DP3_M2C_P" physical_port="FMC_PL_DP[3]_M2C_P" dir="input"/>
+            <port_map logical_port="DP3_M2C_N" physical_port="FMC_PL_DP[3]_M2C_N" dir="input"/>
+            <port_map logical_port="DP4_C2M_P" physical_port="FMC_PL_DP[4]_C2M_P" dir="output"/>
+            <port_map logical_port="DP4_C2M_N" physical_port="FMC_PL_DP[4]_C2M_N" dir="output"/>
+            <port_map logical_port="DP4_M2C_P" physical_port="FMC_PL_DP[4]_M2C_P" dir="input"/>
+            <port_map logical_port="DP4_M2C_N" physical_port="FMC_PL_DP[4]_M2C_N" dir="input"/>
+            <port_map logical_port="DP5_C2M_P" physical_port="FMC_PL_DP[5]_C2M_P" dir="output"/>
+            <port_map logical_port="DP5_C2M_N" physical_port="FMC_PL_DP[5]_C2M_N" dir="output"/>
+            <port_map logical_port="DP5_M2C_P" physical_port="FMC_PL_DP[5]_M2C_P" dir="input"/>
+            <port_map logical_port="DP5_M2C_N" physical_port="FMC_PL_DP[5]_M2C_N" dir="input"/>
+            <port_map logical_port="DP6_C2M_P" physical_port="FMC_PL_DP[6]_C2M_P" dir="output"/>
+            <port_map logical_port="DP6_C2M_N" physical_port="FMC_PL_DP[6]_C2M_N" dir="output"/>
+            <port_map logical_port="DP6_M2C_P" physical_port="FMC_PL_DP[6]_M2C_P" dir="input"/>
+            <port_map logical_port="DP6_M2C_N" physical_port="FMC_PL_DP[6]_M2C_N" dir="input"/>
+            <port_map logical_port="DP7_C2M_P" physical_port="FMC_PL_DP[7]_C2M_P" dir="output"/>
+            <port_map logical_port="DP7_C2M_N" physical_port="FMC_PL_DP[7]_C2M_N" dir="output"/>
+            <port_map logical_port="DP7_M2C_P" physical_port="FMC_PL_DP[7]_M2C_P" dir="input"/>
+            <port_map logical_port="DP7_M2C_N" physical_port="FMC_PL_DP[7]_M2C_N" dir="input"/>
+            
+            <!-- HPC Clock Connections -->
+            <port_map logical_port="GBTCLK0_M2C_P" physical_port="FMC_PL_GBTCLK0_M2C_P" dir="input"/>
+            <port_map logical_port="GBTCLK0_M2C_N" physical_port="FMC_PL_GBTCLK0_M2C_N" dir="input"/>
+            <port_map logical_port="GBTCLK1_M2C_P" physical_port="FMC_PL_GBTCLK1_M2C_P" dir="input"/>
+            <port_map logical_port="GBTCLK1_M2C_N" physical_port="FMC_PL_GBTCLK1_M2C_N" dir="input"/>
+            <port_map logical_port="CLK0_M2C_P" physical_port="FMC_PL_CLK0_M2C_P" dir="input" />
+            <port_map logical_port="CLK0_M2C_N" physical_port="FMC_PL_CLK0_M2C_N" dir="input" />
+            
+            <!-- HPC Control Signals -->
+            <port_map logical_port="PRSNT_M2C_L" physical_port="FMC_PL_PRSNT_M2C_L" dir="input"/>
+            <port_map logical_port="PG_M2C" physical_port="FMC_PL_PG_M2C" dir="input"/>
+            <port_map logical_port="SYNC_C2M_P" physical_port="FMC_PL_SYNC_C2M_P" dir="output"/>
+            <port_map logical_port="SYNC_C2M_N" physical_port="FMC_PL_SYNC_C2M_N" dir="output"/>
+            <port_map logical_port="SYNC_M2C_P" physical_port="FMC_PL_SYNC_M2C_P" dir="input"/>
+            <port_map logical_port="SYNC_M2C_N" physical_port="FMC_PL_SYNC_M2C_N" dir="input"/>
+            <port_map logical_port="REFCLK_C2M_P" physical_port="FMC_PL_REFCLK_C2M_P" dir="output"/>
+            <port_map logical_port="REFCLK_C2M_N" physical_port="FMC_PL_REFCLK_C2M_N" dir="output"/>
+            <port_map logical_port="REFCLK_M2C_P" physical_port="FMC_PL_REFCLK_M2C_P" dir="input"/>
+            <port_map logical_port="REFCLK_M2C_N" physical_port="FMC_PL_REFCLK_M2C_N" dir="input"/>
+          </port_maps>
+        </interface>
+
+        <!-- System Clock -->
+        <interface mode="slave" name="sys_clock" type="xilinx.com:interface:diff_clock:1.0" of_component="sys_clock">
+          <parameters>
+            <parameter name="frequency" value="100000000"/>
+          </parameters>
+          <port_maps>
+            <port_map logical_port="CLK_P" physical_port="CLK_PL_USER_P" dir="input"/>
+            <port_map logical_port="CLK_N" physical_port="CLK_PL_USER_N" dir="input"/>
+          </port_maps>
+        </interface>
+
+        <!-- User LEDs -->
+        <interface mode="master" name="user_leds_pl" type="xilinx.com:interface:gpio:1.0" of_component="user_leds_pl">
+          <port_maps>
+            <port_map logical_port="TRI_O[0]" physical_port="PL_USER_LED1_G" dir="output"/>
+            <port_map logical_port="TRI_O[1]" physical_port="PL_USER_LED2_G" dir="output"/>
+            <port_map logical_port="TRI_O[2]" physical_port="PL_USER_LED3_R" dir="output"/>
+            <port_map logical_port="TRI_O[3]" physical_port="PL_USER_LED4_R" dir="output"/>
+            <port_map logical_port="TRI_O[4]" physical_port="PL_USER_LED5_R" dir="output"/>
+            <port_map logical_port="TRI_O[5]" physical_port="PL_USER_LED6_G" dir="output"/>
+            <port_map logical_port="TRI_O[6]" physical_port="PL_USER_LED7_R" dir="output"/>
+            <port_map logical_port="TRI_O[7]" physical_port="PL_USER_LED8_G" dir="output"/>
+          </port_maps>
+        </interface>
+
+        <!-- User Push Buttons -->
+        <interface mode="master" name="user_pb_pl" type="xilinx.com:interface:gpio:1.0" of_component="user_pb_pl">
+          <port_maps>
+            <port_map logical_port="TRI_I" physical_port="PL_USER_PB" dir="input"/>
+          </port_maps>
+        </interface>
+
+        <!-- User DIP Switches -->
+        <interface mode="master" name="user_dip_sw_pl" type="xilinx.com:interface:gpio:1.0" of_component="user_dip_sw_pl">
+          <port_maps>
+            <port_map logical_port="TRI_I[0]" physical_port="PL_USER_SW1" dir="input"/>
+            <port_map logical_port="TRI_I[1]" physical_port="PL_USER_SW2" dir="input"/>
+            <port_map logical_port="TRI_I[2]" physical_port="PL_USER_SW3" dir="input"/>
+            <port_map logical_port="TRI_I[3]" physical_port="PL_USER_SW4" dir="input"/>
+          </port_maps>
+        </interface>
+
+        <!-- UART Interface -->
+        <interface mode="master" name="uart_pl" type="xilinx.com:interface:uart:1.0" of_component="uart_pl">
+          <port_maps>
+            <port_map logical_port="TxD" physical_port="UART_PL_TXD" dir="output"/>
+            <port_map logical_port="RxD" physical_port="UART_PL_RXD" dir="input"/>
+            <port_map logical_port="RTSn" physical_port="UART_PL_RTS" dir="output"/>
+            <port_map logical_port="CTSn" physical_port="UART_PL_CTS" dir="input"/>
+          </port_maps>
+        </interface>
+
+        <!-- I2C Interface -->
+        <interface mode="master" name="i2c_pl" type="xilinx.com:interface:iic:1.0" of_component="i2c_pl">
+          <port_maps>
+            <port_map logical_port="SCL_I" physical_port="I2C_SCL_PL" dir="input"/>
+            <port_map logical_port="SCL_O" physical_port="I2C_SCL_PL" dir="output"/>
+            <port_map logical_port="SCL_T" physical_port="I2C_SCL_PL" dir="output"/>
+            <port_map logical_port="SDA_I" physical_port="I2C_SDA_PL" dir="input"/>
+            <port_map logical_port="SDA_O" physical_port="I2C_SDA_PL" dir="output"/>
+            <port_map logical_port="SDA_T" physical_port="I2C_SDA_PL" dir="output"/>
+          </port_maps>
+        </interface>
+        
+        <!-- XADC Interface -->
+        <interface mode="master" name="xadc" type="xilinx.com:interface:diff_analog_io:1.0" of_component="xadc">
+          <port_maps>
+            <port_map logical_port="V_P" physical_port="XADC_VP_F" dir="input"/>
+            <port_map logical_port="V_N" physical_port="XADC_VN_F" dir="input"/>
+          </port_maps>
+        </interface>
+        
+        <!-- XADC Channels -->
+        <interface mode="master" name="xadc_adc1" type="xilinx.com:interface:diff_analog_io:1.0" of_component="xadc_adc1">
+          <port_maps>
+            <port_map logical_port="V_P" physical_port="XADC_AD1_F_P" dir="input"/>
+            <port_map logical_port="V_N" physical_port="XADC_AD1_F_N" dir="input"/>
+          </port_maps>
+        </interface>
+        
+        <interface mode="master" name="xadc_adc2" type="xilinx.com:interface:diff_analog_io:1.0" of_component="xadc_adc2">
+          <port_maps>
+            <port_map logical_port="V_P" physical_port="XADC_AD2_F_P" dir="input"/>
+            <port_map logical_port="V_N" physical_port="XADC_AD2_F_N" dir="input"/>
+          </port_maps>
+        </interface>
+        
+        <interface mode="master" name="xadc_adc3" type="xilinx.com:interface:diff_analog_io:1.0" of_component="xadc_adc3">
+          <port_maps>
+            <port_map logical_port="V_P" physical_port="XADC_AD3_F_P" dir="input"/>
+            <port_map logical_port="V_N" physical_port="XADC_AD3_F_N" dir="input"/>
+          </port_maps>
+        </interface>
+        
+        <interface mode="master" name="xadc_adc4" type="xilinx.com:interface:diff_analog_io:1.0" of_component="xadc_adc4">
+          <port_maps>
+            <port_map logical_port="V_P" physical_port="XADC_AD4_F_P" dir="input"/>
+            <port_map logical_port="V_N" physical_port="XADC_AD4_F_N" dir="input"/>
+          </port_maps>
+        </interface>
+        
+        <!-- 1-PPS Interface -->
+        <interface mode="master" name="pps_interface" type="xilinx.com:interface:gpio:1.0" of_component="pps_interface">
+          <port_maps>
+            <port_map logical_port="TRI_I" physical_port="IRIG_COMP_OUT" dir="input"/>
+            <port_map logical_port="TRI_O" physical_port="IRIG_TRIG_OUT" dir="output"/>
+          </port_maps>
+        </interface>
+        
+        <!-- User IO Headers -->
+        <interface mode="master" name="user_io_pl" type="xilinx.com:interface:gpio:1.0" of_component="user_io_pl">
+          <port_maps>
+            <port_map logical_port="TRI_I[0]" physical_port="PL_USER_IO1" dir="inout"/>
+            <port_map logical_port="TRI_I[1]" physical_port="PL_USER_IO2" dir="inout"/>
+            <port_map logical_port="TRI_I[2]" physical_port="PL_USER_IO3" dir="inout"/>
+            <port_map logical_port="TRI_I[3]" physical_port="PL_USER_IO4" dir="inout"/>
+            <port_map logical_port="TRI_I[4]" physical_port="PL_USER_IO5" dir="inout"/>
+            <port_map logical_port="TRI_I[5]" physical_port="PL_USER_IO6" dir="inout"/>
+            <port_map logical_port="TRI_I[6]" physical_port="PL_USER_IO7" dir="inout"/>
+            <port_map logical_port="TRI_I[7]" physical_port="PL_USER_IO8" dir="inout"/>
+          </port_maps>
+        </interface>
+        
+        <!-- Other PS Interfaces - not fully mapped here, as they're generally used through PS -->
+        <!-- These would be expanded if needed for specific PL access -->
+        <interface mode="master" name="ethernet" type="xilinx.com:interface:ethernet:1.0" of_component="ethernet"/>
+        <interface mode="master" name="usb30" type="xilinx.com:interface:usb:1.0" of_component="usb30"/>
+        <interface mode="master" name="displayport" type="xilinx.com:interface:displayport:1.0" of_component="displayport"/>
+        <interface mode="master" name="sata" type="xilinx.com:interface:sata:1.0" of_component="sata"/>
+        <interface mode="master" name="sdio" type="xilinx.com:interface:sdio:1.0" of_component="sdio"/>
+      </interfaces>
+    </component>
+
+    <!-- Components definition -->
+    <component name="ddr4_sodimm_pl" display_name="DDR4 SODIMM Memory (PL)" type="chip" sub_type="memory" major_group="External Memory">
+      <description>DDR4 SODIMM Memory on PL side, 72-bit ECC, up to 16GB</description>
+    </component>
+
+    <component name="adc224" display_name="ADC 224" type="chip" sub_type="rfsoc_adc" major_group="RF Converters">
+      <description>12-bit 2GSPS ADC Port 224</description>
+    </component>
+
+    <component name="adc225" display_name="ADC 225" type="chip" sub_type="rfsoc_adc" major_group="RF Converters">
+      <description>12-bit 2GSPS ADC Port 225</description>
+    </component>
+
+    <component name="adc226" display_name="ADC 226" type="chip" sub_type="rfsoc_adc" major_group="RF Converters">
+      <description>12-bit 2GSPS ADC Port 226</description>
+    </component>
+
+    <component name="adc227" display_name="ADC 227" type="chip" sub_type="rfsoc_adc" major_group="RF Converters">
+      <description>12-bit 2GSPS ADC Port 227</description>
+    </component>
+
+    <component name="dac228" display_name="DAC 228" type="chip" sub_type="rfsoc_dac" major_group="RF Converters">
+      <description>14-bit 6.4GSPS DAC Port 228</description>
+    </component>
+
+    <component name="dac229" display_name="DAC 229" type="chip" sub_type="rfsoc_dac" major_group="RF Converters">
+      <description>14-bit 6.4GSPS DAC Port 229</description>
+    </component>
+
+    <component name="dac230" display_name="DAC 230" type="chip" sub_type="rfsoc_dac" major_group="RF Converters">
+      <description>14-bit 6.4GSPS DAC Port 230</description>
+    </component>
+
+    <component name="dac231" display_name="DAC 231" type="chip" sub_type="rfsoc_dac" major_group="RF Converters">
+      <description>14-bit 6.4GSPS DAC Port 231</description>
+    </component>
+
+    <component name="qsfp28_a" display_name="QSFP28 Port A" type="chip" sub_type="ethernet" major_group="Ethernet">
+      <description>QSFP28 Ethernet Port A (100Gbps)</description>
+    </component>
+
+    <component name="qsfp28_a_control" display_name="QSFP28 Port A Control" type="chip" sub_type="gpio" major_group="Ethernet">
+      <description>QSFP28 Port A Control Signals</description>
+    </component>
+
+    <component name="qsfp28_b" display_name="QSFP28 Port B" type="chip" sub_type="ethernet" major_group="Ethernet">
+      <description>QSFP28 Ethernet Port B (100Gbps)</description>
+    </component>
+
+    <component name="qsfp28_b_control" display_name="QSFP28 Port B Control" type="chip" sub_type="gpio" major_group="Ethernet">
+      <description>QSFP28 Port B Control Signals</description>
+    </component>
+
+    <component name="fmc_hpc_connector" display_name="FMC+ HPC Connector" type="connector" sub_type="fmc_hpc" major_group="Expansion">
+      <description>VITA57.4 compliant FMC+ High Pin Count connector</description>
+    </component>
+
+    <component name="sys_clock" display_name="System Clock" type="chip" sub_type="system_clock" major_group="Clock">
+      <description>System Clock from Si5341 programmable clock generator</description>
+    </component>
+
+    <component name="user_leds_pl" display_name="User LEDs (PL)" type="chip" sub_type="led" major_group="General Purpose">
+      <description>8 User LEDs connected to PL</description>
+    </component>
+
+    <component name="user_pb_pl" display_name="User Push Button (PL)" type="chip" sub_type="push_button" major_group="General Purpose">
+      <description>1 User Push Button connected to PL</description>
+    </component>
+
+    <component name="user_dip_sw_pl" display_name="User DIP Switches (PL)" type="chip" sub_type="switch" major_group="General Purpose">
+      <description>4 User DIP Switches connected to PL</description>
+    </component>
+
+    <component name="uart_pl" display_name="UART (PL)" type="chip" sub_type="uart" major_group="UART">
+      <description>UART to USB through CP2103 Bridge (PL)</description>
+    </component>
+
+    <component name="i2c_pl" display_name="I2C Bus (PL)" type="chip" sub_type="iic" major_group="I2C">
+      <description>I2C Bus from PL for programmable clocks and other devices</description>
+    </component>
+    
+    <component name="xadc" display_name="XADC" type="chip" sub_type="xadc" major_group="Analog">
+      <description>XADC voltage monitoring input</description>
+    </component>
+    
+    <component name="xadc_adc1" display_name="XADC ADC1" type="chip" sub_type="xadc" major_group="Analog">
+      <description>XADC external channel 1</description>
+    </component>
+    
+    <component name="xadc_adc2" display_name="XADC ADC2" type="chip" sub_type="xadc" major_group="Analog">
+      <description>XADC external channel 2</description>
+    </component>
+    
+    <component name="xadc_adc3" display_name="XADC ADC3" type="chip" sub_type="xadc" major_group="Analog">
+      <description>XADC external channel 3</description>
+    </component>
+    
+    <component name="xadc_adc4" display_name="XADC ADC4" type="chip" sub_type="xadc" major_group="Analog">
+      <description>XADC external channel 4</description>
+    </component>
+    
+    <component name="pps_interface" display_name="1-PPS Interface" type="chip" sub_type="gpio" major_group="External Input">
+      <description>1-PPS (Pulse Per Second) interface for timing synchronization</description>
+    </component>
+    
+    <component name="user_io_pl" display_name="User IO Headers (PL)" type="chip" sub_type="gpio" major_group="General Purpose">
+      <description>8 User IO pins connected to PL</description>
+    </component>
+    
+    <component name="ethernet" display_name="Ethernet" type="chip" sub_type="ethernet" major_group="Ethernet">
+      <description>10/100/1000 Ethernet RJ45 port</description>
+    </component>
+
+    <component name="usb30" display_name="USB 3.0" type="chip" sub_type="usb" major_group="USB">
+      <description>USB 3.0 port</description>
+    </component>
+
+    <component name="displayport" display_name="Display Port" type="chip" sub_type="displayport" major_group="Display">
+      <description>Display Port interface</description>
+    </component>
+
+    <component name="sata" display_name="SATA" type="chip" sub_type="sata" major_group="Storage">
+      <description>Serial ATA port</description>
+    </component>
+
+    <component name="sdio" display_name="SDIO" type="chip" sub_type="sdio" major_group="Storage">
+      <description>Secure Digital IO port for SD card interface</description>
+    </component>
+  </components>
+
+        <!-- QSFP28 Port A -->
+        <interface mode="master" name="qsfp28_a" type="xilinx.com:interface:gt:1.0" of_component="qsfp28_a">
+          <preferred_ips>
+            <preferred_ip vendor="xilinx.com" library="ip" name="xxv_ethernet" order="0"/>
+            <preferred_ip vendor="xilinx.com" library="ip" name="l_ethernet" order="1"/>
+          </preferred_ips>
+          <port_maps>
+            <port_map logical_port="GTY_TX_P0" physical_port="QSFP28_A_TX1_P" dir="output"/>
+            <port_map logical_port="GTY_TX_N0" physical_port="QSFP28_A_TX1_N" dir="output"/>
+            <port_map logical_port="GTY_RX_P0" physical_port="QSFP28_A_RX1_P" dir="input"/>
+            <port_map logical_port="GTY_RX_N0" physical_port="QSFP28_A_RX1_N" dir="input"/>
+            <port_map logical_port="GTY_TX_P1" physical_port="QSFP28_A_TX2_P" dir="output"/>
+            <port_map logical_port="GTY_TX_N1" physical_port="QSFP28_A_TX2_N" dir="output"/>
+            <port_map logical_port="GTY_RX_P1" physical_port="QSFP28_A_RX2_P" dir="input"/>
+            <port_map logical_port="GTY_RX_N1" physical_port="QSFP28_A_RX2_N" dir="input"/>
+            <port_map logical_port="GTY_TX_P2" physical_port="QSFP28_A_TX3_P" dir="output"/>
+            <port_map logical_port="GTY_TX_N2" physical_port="QSFP28_A_TX3_N" dir="output"/>
+            <port_map logical_port="GTY_RX_P2" physical_port="QSFP28_A_RX3_P" dir="input"/>
+            <port_map logical_port="GTY_RX_N2" physical_port="QSFP28_A_RX3_N" dir="input"/>
+            <port_map logical_port="GTY_TX_P3" physical_port="QSFP28_A_TX4_P" dir="output"/>
+            <port_map logical_port="GTY_TX_N3" physical_port="QSFP28_A_TX4_N" dir="output"/>
+            <port_map logical_port="GTY_RX_P3" physical_port="QSFP28_A_RX4_P" dir="input"/>
+            <port_map logical_port="GTY_RX_N3" physical_port="QSFP28_A_RX4_N" dir="input"/>
+            <port_map logical_port="REFCLK_P0" physical_port="GTY_130_REFCLK_P" dir="input"/>
+            <port_map logical_port="REFCLK_N0" physical_port="GTY_130_REFCLK_N" dir="input"/>
+          </port_maps>
+          <parameters>
+            <parameter name="gt_loc" value="GTYE4_CHANNEL_X0Y8 GTYE4_CHANNEL_X0Y9 GTYE4_CHANNEL_X0Y10 GTYE4_CHANNEL_X0Y11"/>
+          </parameters>
+        </interface>
+          
+        <!-- GPIO Control for QSFP28 Port A -->
+        <interface mode="master" name="qsfp28_a_control" type="xilinx.com:interface:gpio:1.0" of_component="qsfp28_a_control">
+          <port_maps>
+            <port_map logical_port="TRI_I" physical_port="QSFP28_A_IntL" dir="input"/>
+            <port_map logical_port="TRI_I" physical_port="QSFP28_A_ModPrsL" dir="input"/>
+            <port_map logical_port="TRI_O" physical_port="QSFP28_A_LPMode" dir="output"/>
+            <port_map logical_port="TRI_O" physical_port="QSFP28_A_RESET_L" dir="output"/>
+          </port_maps>
+        </interface>
+          
+        <!-- QSFP28 Port B -->
+        <interface mode="master" name="qsfp28_b" type="xilinx.com:interface:gt:1.0" of_component="qsfp28_b">
+          <preferred_ips>
+            <preferred_ip vendor="xilinx.com" library="ip" name="xxv_ethernet" order="0"/>
+            <preferred_ip vendor="xilinx.com" library="ip" name="l_ethernet" order="1"/>
+          </preferred_ips>
+          <port_maps>
+            <port_map logical_port="GTY_TX_P0" physical_port="QSFP28_B_TX1_P" dir="output"/>
+            <port_map logical_port="GTY_TX_N0" physical_port="QSFP28_B_TX1_N" dir="output"/>
+            <port_map logical_port="GTY_RX_P0" physical_port="QSFP28_B_RX1_P" dir="input"/>
+            <port_map logical_port="GTY_RX_N0" physical_port="QSFP28_B_RX1_N" dir="input"/>
+            <port_map logical_port="GTY_TX_P1" physical_port="QSFP28_B_TX2_P" dir="output"/>
+            <port_map logical_port="GTY_TX_N1" physical_port="QSFP28_B_TX2_N" dir="output"/>
+            <port_map logical_port="GTY_RX_P1" physical_port="QSFP28_B_RX2_P" dir="input"/>
+            <port_map logical_port="GTY_RX_N1" physical_port="QSFP28_B_RX2_N" dir="input"/>
+            <port_map logical_port="GTY_TX_P2" physical_port="QSFP28_B_TX3_P" dir="output"/>
+            <port_map logical_port="GTY_TX_N2" physical_port="QSFP28_B_TX3_N" dir="output"/>
+            <port_map logical_port="GTY_RX_P2" physical_port="QSFP28_B_RX3_P" dir="input"/>
+            <port_map logical_port="GTY_RX_N2" physical_port="QSFP28_B_RX3_N" dir="input"/>
+            <port_map logical_port="GTY_TX_P3" physical_port="QSFP28_B_TX4_P" dir="output"/>
+            <port_map logical_port="GTY_TX_N3" physical_port="QSFP28_B_TX4_N" dir="output"/>
+            <port_map logical_port="GTY_RX_P3" physical_port="QSFP28_B_RX4_P" dir="input"/>
+            <port_map logical_port="GTY_RX_N3" physical_port="QSFP28_B_RX4_N" dir="input"/>
+            <port_map logical_port="REFCLK_P0" physical_port="GTY_131_REFCLK_P" dir="input"/>
+            <port_map logical_port="REFCLK_N0" physical_port="GTY_131_REFCLK_N" dir="input"/>
+          </port_maps>
+          <parameters>
+            <parameter name="gt_loc" value="GTYE4_CHANNEL_X0Y12 GTYE4_CHANNEL_X0Y13 GTYE4_CHANNEL_X0Y14 GTYE4_CHANNEL_X0Y15"/>
+          </parameters>
+        </interface>
+          
+        <!-- GPIO Control for QSFP28 Port B -->
+        <interface mode="master" name="qsfp28_b_control" type="xilinx.com:interface:gpio:1.0" of_component="qsfp28_b_control">
+          <port_maps>
+            <port_map logical_port="TRI_I" physical_port="QSFP28_B_IntL" dir="input"/>
+            <port_map logical_port="TRI_I" physical_port="QSFP28_B_ModPrsL" dir="input"/>
+            <port_map logical_port="TRI_O" physical_port="QSFP28_B_LPMode" dir="output"/>
+            <port_map logical_port="TRI_O" physical_port="QSFP28_B_RESET_L" dir="output"/>
+          </port_maps>
+        </interface>
+
+        <!-- ADC224 Interface -->
+        <interface mode="slave" name="adc224" type="xilinx.com:interface:diff_analog_io:1.0" of_component="adc224">
+          <port_maps>
+            <port_map logical_port="V_P0" physical_port="ADC_IN0_224_P" dir="input"/>
+            <port_map logical_port="V_N0" physical_port="ADC_IN0_224_N" dir="input"/>
+            <port_map logical_port="V_P1" physical_port="ADC_IN1_224_P" dir="input"/>
+            <port_map logical_port="V_N1" physical_port="ADC_IN1_224_N" dir="input"/>
+            <port_map logical_port="V_P2" physical_port="ADC_IN2_224_P" dir="input"/>
+            <port_map logical_port="V_N2" physical_port="ADC_IN2_224_N" dir="input"/>
+            <port_map logical_port="V_P3" physical_port="ADC_IN3_224_P" dir="input"/>
+            <port_map logical_port="V_N3" physical_port="ADC_IN3_224_N" dir="input"/>
+            <port_map logical_port="CLK_P" physical_port="ADC_224_REFCLK_P" dir="input"/>
+            <port_map logical_port="CLK_N" physical_port="ADC_224_REFCLK_N" dir="input"/>
+          </port_maps>
+        </interface>
+
+        <!-- ADC225 Interface -->
+        <interface mode="slave" name="adc225" type="xilinx.com:interface:diff_analog_io:1.0" of_component="adc225">
+          <port_maps>
+            <port_map logical_port="V_P0" physical_port="ADC_IN0_225_P" dir="input"/>
+            <port_map logical_port="V_N0" physical_port="ADC_IN0_225_N" dir="input"/>
+            <port_map logical_port="V_P1" physical_port="ADC_IN1_225_P" dir="input"/>
+            <port_map logical_port="V_N1" physical_port="ADC_IN1_225_N" dir="input"/>
+            <port_map logical_port="V_P2" physical_port="ADC_IN2_225_P" dir="input"/>
+            <port_map logical_port="V_N2" physical_port="ADC_IN2_225_N" dir="input"/>
+            <port_map logical_port="V_P3" physical_port="ADC_IN3_225_P" dir="input"/>
+            <port_map logical_port="V_N3" physical_port="ADC_IN3_225_N" dir="input"/>
+            <port_map logical_port="CLK_P" physical_port="ADC_225_REFCLK_P" dir="input"/>
+            <port_map logical_port="CLK_N" physical_port="ADC_225_REFCLK_N" dir="input"/>
+          </port_maps>
+        </interface>
+
+        <!-- ADC226 Interface -->
+        <interface mode="slave" name="adc226" type="xilinx.com:interface:diff_analog_io:1.0" of_component="adc226">
+          <port_maps>
+            <port_map logical_port="V_P0" physical_port="ADC_IN0_226_P" dir="input"/>
+            <port_map logical_port="V_N0" physical_port="ADC_IN0_226_N" dir="input"/>
+            <port_map logical_port="V_P1" physical_port="ADC_IN1_226_P" dir="input"/>
+            <port_map logical_port="V_N1" physical_port="ADC_IN1_226_N" dir="input"/>
+            <port_map logical_port="V_P2" physical_port="ADC_IN2_226_P" dir="input"/>
+            <port_map logical_port="V_N2" physical_port="ADC_IN2_226_N" dir="input"/>
+            <port_map logical_port="V_P3" physical_port="ADC_IN3_226_P" dir="input"/>
+            <port_map logical_port="V_N3" physical_port="ADC_IN3_226_N" dir="input"/>
+            <port_map logical_port="CLK_P" physical_port="ADC_226_REFCLK_P" dir="input"/>
+            <port_map logical_port="CLK_N" physical_port="ADC_226_REFCLK_N" dir="input"/>
+          </port_maps>
+        </interface>
+
+        <!-- ADC227 Interface -->
+        <interface mode="slave" name="adc227" type="xilinx.com:interface:diff_analog_io:1.0" of_component="adc227">
+          <port_maps>
+            <port_map logical_port="V_P0" physical_port="ADC_IN0_227_P" dir="input"/>
+            <port_map logical_port="V_N0" physical_port="ADC_IN0_227_N" dir="input"/>
+            <port_map logical_port="V_P1" physical_port="ADC_IN1_227_P" dir="input"/>
+            <port_map logical_port="V_N1" physical_port="ADC_IN1_227_N" dir="input"/>
+            <port_map logical_port="V_P2" physical_port="ADC_IN2_227_P" dir="input"/>
+            <port_map logical_port="V_N2" physical_port="ADC_IN2_227_N" dir="input"/>
+            <port_map logical_port="V_P3" physical_port="ADC_IN3_227_P" dir="input"/>
+            <port_map logical_port="V_N3" physical_port="ADC_IN3_227_N" dir="input"/>
+            <port_map logical_port="CLK_P" physical_port="ADC_227_REFCLK_P" dir="input"/>
+            <port_map logical_port="CLK_N" physical_port="ADC_227_REFCLK_N" dir="input"/>
+          </port_maps>
+        </interface>
+
+        <!-- DAC228 Interface -->
+        <interface mode="master" name="dac228" type="xilinx.com:interface:diff_analog_io:1.0" of_component="dac228">
+          <port_maps>
+            <port_map logical_port="V_P0" physical_port="DAC_VOUT0_228_P" dir="output"/>
+            <port_map logical_port="V_N0" physical_port="DAC_VOUT0_228_N" dir="output"/>
+            <port_map logical_port="V_P1" physical_port="DAC_VOUT1_228_P" dir="output"/>
+            <port_map logical_port="V_N1" physical_port="DAC_VOUT1_228_N" dir="output"/>
+            <port_map logical_port="V_P2" physical_port="DAC_VOUT2_228_P" dir="output"/>
+            <port_map logical_port="V_N2" physical_port="DAC_VOUT2_228_N" dir="output"/>
+            <port_map logical_port="V_P3" physical_port="DAC_VOUT3_228_P" dir="output"/>
+            <port_map logical_port="V_N3" physical_port="DAC_VOUT3_228_N" dir="output"/>
+            <port_map logical_port="CLK_P" physical_port="DAC_228_REFCLK_P" dir="input"/>
+            <port_map logical_port="CLK_N" physical_port="DAC_228_REFCLK_N" dir="input"/>
+            <port_map logical_port="SYSREF_P" physical_port="DAC_228_SYSREF_P" dir="input"/>
+            <port_map logical_port="SYSREF_N" physical_port="DAC_228_SYSREF_N" dir="input"/>
+          </port_maps>
+        </interface>
+
+        <!-- DAC229 Interface -->
+        <interface mode="master" name="dac229" type="xilinx.com:interface:diff_analog_io:1.0" of_component="dac229">
+          <port_maps>
+            <port_map logical_port="V_P0" physical_port="DAC_VOUT0_229_P" dir="output"/>
+            <port_map logical_port="V_N0" physical_port="DAC_VOUT0_229_N" dir="output"/>
+            <port_map logical_port="V_P1" physical_port="DAC_VOUT1_229_P" dir="output"/>
+            <port_map logical_port="V_N1" physical_port="DAC_VOUT1_229_N" dir="output"/>
+            <port_map logical_port="V_P2" physical_port="DAC_VOUT2_229_P" dir="output"/>
+            <port_map logical_port="V_N2" physical_port="DAC_VOUT2_229_N" dir="output"/>
+            <port_map logical_port="V_P3" physical_port="DAC_VOUT3_229_P" dir="output"/>
+            <port_map logical_port="V_N3" physical_port="DAC_VOUT3_229_N" dir="output"/>
+            <port_map logical_port="CLK_P" physical_port="DAC_229_REFCLK_P" dir="input"/>
+            <port_map logical_port="CLK_N" physical_port="DAC_229_REFCLK_N" dir="input"/>
+          </port_maps>
+        </interface>
+
+        <!-- DAC230 Interface -->
+        <interface mode="master" name="dac230" type="xilinx.com:interface:diff_analog_io:1.0" of_component="dac230">
+          <port_maps>
+            <port_map logical_port="V_P0" physical_port="DAC_VOUT0_230_P" dir="output"/>
+            <port_map logical_port="V_N0" physical_port="DAC_VOUT0_230_N" dir="output"/>
+            <port_map logical_port="V_P1" physical_port="DAC_VOUT1_230_P" dir="output"/>
+            <port_map logical_port="V_N1" physical_port="DAC_VOUT1_230_N" dir="output"/>
+            <port_map logical_port="V_P2" physical_port="DAC_VOUT2_230_P" dir="output"/>
+            <port_map logical_port="V_N2" physical_port="DAC_VOUT2_230_N" dir="output"/>
+            <port_map logical_port="V_P3" physical_port="DAC_VOUT3_230_P" dir="output"/>
+            <port_map logical_port="V_N3" physical_port="DAC_VOUT3_230_N" dir="output"/>
+            <port_map logical_port="CLK_P" physical_port="DAC_230_REFCLK_P" dir="input"/>
+            <port_map logical_port="CLK_N" physical_port="DAC_230_REFCLK_N" dir="input"/>
+          </port_maps>
+        </interface>
+
+        <!-- DAC231 Interface -->
+        <interface mode="master" name="dac231" type="xilinx.com:interface:diff_analog_io:1.0" of_component="dac231">
+          <port_maps>
+            <port_map logical_port="V_P0" physical_port="DAC_VOUT0_231_P" dir="output"/>
+            <port_map logical_port="V_N0" physical_port="DAC_VOUT0_231_N" dir="output"/>
+            <port_map logical_port="V_P1" physical_port="DAC_VOUT1_231_P" dir="output"/>
+            <port_map logical_port="V_N1" physical_port="DAC_VOUT1_231_N" dir="output"/>
+            <port_map logical_port="V_P2" physical_port="DAC_VOUT2_231_P" dir="output"/>
+            <port_map logical_port="V_N2" physical_port="DAC_VOUT2_231_N" dir="output"/>
+            <port_map logical_port="V_P3" physical_port="DAC_VOUT3_231_P" dir="output"/>
+            <port_map logical_port="V_N3" physical_port="DAC_VOUT3_231_N" dir="output"/>
+            <port_map logical_port="CLK_P" physical_port="DAC_231_REFCLK_P" dir="input"/>
+            <port_map logical_port="CLK_N" physical_port="DAC_231_REFCLK_N" dir="input"/>
+          </port_maps>
+        </interface>
+
+</components>
+
+  <jtag_chains>
+    <jtag_chain name="chain1">
+      <position name="0" component="part0"/>
+    </jtag_chain>
+  </jtag_chains>
+
+  <!-- Connection information -->
+  <connections>
+    <!-- Clock connections -->
+    <connection name="part0_sys_clock" component1="part0" component2="sys_clock">
+      <connection_map name="part0_sys_clock" typical_delay="5" c1_st_index="0" c1_end_index="1" c2_st_index="0" c2_end_index="1"/>
+    </connection>
+
+    <!-- DDR4 SODIMM connections -->
+    <connection name="part0_ddr4_sodimm_pl" component1="part0" component2="ddr4_sodimm_pl">
+      <connection_map name="part0_ddr4_sodimm_pl" typical_delay="5" c1_st_index="2" c1_end_index="131" c2_st_index="0" c2_end_index="129"/>
+    </connection>
+
+    <!-- ADC224 connections -->
+    <connection name="part0_adc224" component1="part0" component2="adc224">
+      <connection_map name="part0_adc224" typical_delay="5" c1_st_index="201" c1_end_index="210" c2_st_index="0" c2_end_index="9"/>
+    </connection>
+
+    <!-- ADC225 connections -->
+    <connection name="part0_adc225" component1="part0" component2="adc225">
+      <connection_map name="part0_adc225" typical_delay="5" c1_st_index="211" c1_end_index="220" c2_st_index="0" c2_end_index="9"/>
+    </connection>
+
+    <!-- ADC226 connections -->
+    <connection name="part0_adc226" component1="part0" component2="adc226">
+      <connection_map name="part0_adc226" typical_delay="5" c1_st_index="221" c1_end_index="230" c2_st_index="0" c2_end_index="9"/>
+    </connection>
+
+    <!-- ADC227 connections -->
+    <connection name="part0_adc227" component1="part0" component2="adc227">
+      <connection_map name="part0_adc227" typical_delay="5" c1_st_index="231" c1_end_index="240" c2_st_index="0" c2_end_index="9"/>
+    </connection>
+
+    <!-- DAC228 connections -->
+    <connection name="part0_dac228" component1="part0" component2="dac228">
+      <connection_map name="part0_dac228" typical_delay="5" c1_st_index="241" c1_end_index="252" c2_st_index="0" c2_end_index="11"/>
+    </connection>
+
+    <!-- DAC229 connections -->
+    <connection name="part0_dac229" component1="part0" component2="dac229">
+      <connection_map name="part0_dac229" typical_delay="5" c1_st_index="253" c1_end_index="262" c2_st_index="0" c2_end_index="9"/>
+    </connection>
+
+    <!-- DAC230 connections -->
+    <connection name="part0_dac230" component1="part0" component2="dac230">
+      <connection_map name="part0_dac230" typical_delay="5" c1_st_index="263" c1_end_index="272" c2_st_index="0" c2_end_index="9"/>
+    </connection>
+
+    <!-- DAC231 connections -->
+    <connection name="part0_dac231" component1="part0" component2="dac231">
+      <connection_map name="part0_dac231" typical_delay="5" c1_st_index="273" c1_end_index="282" c2_st_index="0" c2_end_index="9"/>
+    </connection>
+
+    <!-- QSFP28_A connections -->
+    <connection name="part0_qsfp28_a" component1="part0" component2="qsfp28_a">
+      <connection_map name="part0_qsfp28_a" typical_delay="5" c1_st_index="283" c1_end_index="304" c2_st_index="0" c2_end_index="21"/>
+    </connection>
+
+    <!-- QSFP28_A control connections -->
+    <connection name="part0_qsfp28_a_control" component1="part0" component2="qsfp28_a_control">
+      <connection_map name="part0_qsfp28_a_control" typical_delay="5" c1_st_index="299" c1_end_index="302" c2_st_index="0" c2_end_index="3"/>
+    </connection>
+
+    <!-- QSFP28_B connections -->
+    <connection name="part0_qsfp28_b" component1="part0" component2="qsfp28_b">
+      <connection_map name="part0_qsfp28_b" typical_delay="5" c1_st_index="305" c1_end_index="326" c2_st_index="0" c2_end_index="21"/>
+    </connection>
+
+    <!-- QSFP28_B control connections -->
+    <connection name="part0_qsfp28_b_control" component1="part0" component2="qsfp28_b_control">
+      <connection_map name="part0_qsfp28_b_control" typical_delay="5" c1_st_index="321" c1_end_index="324" c2_st_index="0" c2_end_index="3"/>
+    </connection>
+
+    <!-- FMC+ HPC connections -->
+    <connection name="part0_fmc_hpc_connector" component1="part0" component2="fmc_hpc_connector">
+      <connection_map name="part0_fmc_hpc_connector" typical_delay="5" c1_st_index="327" c1_end_index="500" c2_st_index="0" c2_end_index="173"/>
+    </connection>
+
+    <!-- User LED connections -->
+    <connection name="part0_user_leds_pl" component1="part0" component2="user_leds_pl">
+      <connection_map name="part0_user_leds_pl" typical_delay="5" c1_st_index="348" c1_end_index="355" c2_st_index="0" c2_end_index="7"/>
+    </connection>
+
+    <!-- User Push Button connections -->
+    <connection name="part0_user_pb_pl" component1="part0" component2="user_pb_pl">
+      <connection_map name="part0_user_pb_pl" typical_delay="5" c1_st_index="356" c1_end_index="356" c2_st_index="0" c2_end_index="0"/>
+    </connection>
+
+    <!-- User DIP Switch connections -->
+    <connection name="part0_user_dip_sw_pl" component1="part0" component2="user_dip_sw_pl">
+      <connection_map name="part0_user_dip_sw_pl" typical_delay="5" c1_st_index="357" c1_end_index="360" c2_st_index="0" c2_end_index="3"/>
+    </connection>
+
+    <!-- UART connections -->
+    <connection name="part0_uart_pl" component1="part0" component2="uart_pl">
+      <connection_map name="part0_uart_pl" typical_delay="5" c1_st_index="341" c1_end_index="344" c2_st_index="0" c2_end_index="3"/>
+    </connection>
+
+    <!-- I2C connections -->
+    <connection name="part0_i2c_pl" component1="part0" component2="i2c_pl">
+      <connection_map name="part0_i2c_pl" typical_delay="5" c1_st_index="345" c1_end_index="347" c2_st_index="0" c2_end_index="2"/>
+    </connection>
+    
+    <!-- XADC connections -->
+    <connection name="part0_xadc" component1="part0" component2="xadc">
+      <connection_map name="part0_xadc" typical_delay="5" c1_st_index="369" c1_end_index="370" c2_st_index="0" c2_end_index="1"/>
+    </connection>
+    
+    <!-- XADC ADC1 connections -->
+    <connection name="part0_xadc_adc1" component1="part0" component2="xadc_adc1">
+      <connection_map name="part0_xadc_adc1" typical_delay="5" c1_st_index="361" c1_end_index="362" c2_st_index="0" c2_end_index="1"/>
+    </connection>
+    
+    <!-- XADC ADC2 connections -->
+    <connection name="part0_xadc_adc2" component1="part0" component2="xadc_adc2">
+      <connection_map name="part0_xadc_adc2" typical_delay="5" c1_st_index="363" c1_end_index="364" c2_st_index="0" c2_end_index="1"/>
+    </connection>
+    
+    <!-- XADC ADC3 connections -->
+    <connection name="part0_xadc_adc3" component1="part0" component2="xadc_adc3">
+      <connection_map name="part0_xadc_adc3" typical_delay="5" c1_st_index="365" c1_end_index="366" c2_st_index="0" c2_end_index="1"/>
+    </connection>
+    
+    <!-- XADC ADC4 connections -->
+    <connection name="part0_xadc_adc4" component1="part0" component2="xadc_adc4">
+      <connection_map name="part0_xadc_adc4" typical_delay="5" c1_st_index="367" c1_end_index="368" c2_st_index="0" c2_end_index="1"/>
+    </connection>
+    
+    <!-- 1-PPS interface connections -->
+    <connection name="part0_pps_interface" component1="part0" component2="pps_interface">
+      <connection_map name="part0_pps_interface" typical_delay="5" c1_st_index="379" c1_end_index="380" c2_st_index="0" c2_end_index="1"/>
+    </connection>
+    
+    <!-- User IO Header connections -->
+    <connection name="part0_user_io_pl" component1="part0" component2="user_io_pl">
+      <connection_map name="part0_user_io_pl" typical_delay="5" c1_st_index="371" c1_end_index="378" c2_st_index="0" c2_end_index="7"/>
+    </connection>
+  </connections>
+</board><?xml version="1.0" encoding="UTF-8" ?>
